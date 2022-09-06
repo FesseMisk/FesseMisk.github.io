@@ -1,0 +1,63 @@
+---
+---
+
+<!doctype html>
+
+
+<style>
+  /* https://github.com/lonekorean/gist-syntax-themes */
+  @import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/cobalt.css');
+  
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  body {
+    margin: 20px;
+    font: 16px 'Open Sans', sans-serif;
+  }
+  body .gist .gist-file {
+    border-color: #555 #555 #444
+  }
+  body .gist .gist-data {
+    border-color: #555
+  }
+  body .gist .gist-meta {
+    color: #ffffff;
+    background: #373737; 
+  }
+  body .gist .gist-meta a {
+    color: #ffffff
+  }
+  </style>
+  
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached browser-upgrade.html %}
+    {% include_cached masthead.html %}
+
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+    {% include new-window-fix.html %}
+  </body>
+</html>

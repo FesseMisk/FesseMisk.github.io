@@ -1,0 +1,9 @@
+.obsidian
+_site
+.sass-cache
+.jekyll-metadata
+Gemfile.lock
+_posts/private
+_posts/ctf/cisk_ctf_private
+_posts/ctf/NOTES_private
+_posts/pentest_notes
