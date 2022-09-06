@@ -128,13 +128,13 @@ tag_archive:
 comments:
   provider: "giscus"
   giscus:
-    repo                 : "julianhal/julianhal.github.io"  
-    repo_id              : "R_kgDOHChpxA"  # Shown during giscus setup at https://giscus.app
+    repo                 : "FesseMisk/FesseMisk.github.io"  
+    repo_id              : "R_kgDOH8hrYQ"  # Shown during giscus setup at https://giscus.app
     category_name        : "General" # Full text name of the category
-    category_id          : "DIC_kwDOHChpxM4COcS6"  # Shown during giscus setup at https://giscus.app
+    category_id          : "DIC_kwDOH8hrYc4CRQSb"  # Shown during giscus setup at https://giscus.app
     discussion_term      : "url" # "pathname" (default), "url", "title", "og:title"
     reactions_enabled    : "1" # '1' for enabled (default), '0' for disabled
-    theme                : "dark_dimmed"  # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+    theme                : "transparent_dark"  # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
 
 #analytics:
   #provider: "google-gtag"
