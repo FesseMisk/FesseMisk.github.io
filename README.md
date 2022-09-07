@@ -1,1 +1,0 @@
-Nettside for diverse
