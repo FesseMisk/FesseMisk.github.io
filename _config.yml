@@ -150,7 +150,7 @@ comments:
     theme                : "transparent_dark"  # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
 
 collections:
-  knawledge:
+  docs:
     output: true
     permalink: /:collection/:path/
 
