@@ -11,18 +11,26 @@ main:
     url: /docs/
 
 docs:
-  - title: Getting Started
+  - title: Notes Collection
     children:
-      - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
-      - title: "Structure"
-        url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+      - title: "Cheatsheets"
+        url: /docs/cheatsheets/
+      - title: "Recon & Enumeration"
+        url: /docs/recon-and-enumeration/
+      - title: "Exploiting Vulnerabilities"
+        url: /docs/exploiting-vulnerabilities/
+      - title: "Windows Post-Exploitation"
+        url: /docs/windows-post-exploitation/
+      - title: "Linux Post-Exploitation"
+        url: /docs/linux-post-exploitation/
+      - title: "Exploit Development"
+        url: /docs/exploit-development/
+      - title: "Reverse Engineering"
+        url: /docs/reverse-engineering/
+#      - title: ""
+#        url: "/docs/"
 
-  - title: Customization
+  - title: Example TEST
     children:
       - title: "Configuration"
         url: /docs/configuration/
@@ -35,22 +43,3 @@ docs:
       - title: "Layouts"
         url: /docs/layouts/
 
-  - title: Content
-    children:
-      - title: "Working with Posts"
-        url: /docs/posts/
-      - title: "Working with Pages"
-        url: /docs/pages/
-      - title: "Working with Collections"
-        url: /docs/collections/
-      - title: "Helpers"
-        url: /docs/helpers/
-      - title: "Utility Classes"
-        url: /docs/utility-classes/
-
-  - title: Extras
-    children:
-      - title: "Stylesheets"
-        url: /docs/stylesheets/
-      - title: "JavaScript"
-        url: /docs/javascript/
