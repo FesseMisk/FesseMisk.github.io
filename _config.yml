@@ -152,7 +152,7 @@ comments:
 collections:
   docs:
     output: true
-    permalink: /collections/:collection/:path/
+    permalink: /:collection/:path/
 
 
 #analytics:
