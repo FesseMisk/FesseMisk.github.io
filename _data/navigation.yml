@@ -8,7 +8,7 @@ main:
   - title: "Tags"
     url: /tags/
   - title: "Docs"
-    url: /docs/
+    url: /docs/cheatsheets/
 
 docs:
   - title: Notes Collection
