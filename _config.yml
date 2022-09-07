@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   FesseMisk CTF team 
 twitter_username: 
 github_username: FesseMisk
-minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 minimal_mistakes_skin2   : "contrast"
 search: true
 repository: FesseMisk/FesseMisk.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
