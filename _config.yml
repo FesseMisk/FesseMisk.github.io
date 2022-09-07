@@ -124,8 +124,8 @@ defaults:
     values:
       layout: single
       author_profile: false
-      share: true
-      comments: true
+      share: false
+      comments: false
       share: true
       read_time: false
       sidebar:
