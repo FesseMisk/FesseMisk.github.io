@@ -2,7 +2,7 @@
 title: "OP HOLMGANG - Writeup"
 categories: Writeup
 tags: forensics
-published: false
+published: true
 toc: true 
 toc_sticky: true
 header:
@@ -11,7 +11,7 @@ header:
     teaser: /images/2022-10-04-09-15-48.png
 tagline: ""
 read_time: true
-#date: 2022-08-08
+date: 2022-08-21
 #last_modified_at: 2022-07-26
 ---
 
