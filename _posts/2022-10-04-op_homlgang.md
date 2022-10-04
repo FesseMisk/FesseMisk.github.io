@@ -16,11 +16,10 @@ date: 2022-08-21
 ---
 
 
-
-[case_summary.pdf](/assets/2022-09-04-op_homlgang/case_summary.pdf)
-
 # Intro
 intro tekst lorem ipsum
+
+[case_summary.pdf](/assets/2022-09-04-op_homlgang/case_summary.pdf)
 
 ## Scoreboard
 
