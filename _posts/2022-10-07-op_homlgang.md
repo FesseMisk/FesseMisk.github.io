@@ -1,7 +1,7 @@
 ---
 title: "OP HOLMGANG - Writeup"
 categories: Writeup
-tags: forensics
+tags: writeup
 published: true
 toc: true 
 toc_sticky: true
@@ -11,13 +11,13 @@ header:
     teaser: /images/2022-10-04-09-15-48.png
 tagline: ""
 read_time: true
-date: 2022-08-21
-#last_modified_at: 2022-07-26
+date: 2022-10-07
+last_modified_at: 2022-10-10
 ---
 
 
 # Intro
-OP HOLMGANG was a CTF hosted by Kripos, a special agency of the Norwegian Police Service, for the University of Oslo, but it was open to the public. Although it was a classic jepoardy-style CTF, it was special in the sence that every chall was connected up to a central incidenct. It was all made to look like an actual police investigation, which made the CTF a lot more fun. The Case Summary can be read here,[case_summary.pdf](/assets/2022-09-04-op_homlgang/case_summary.pdf).
+OP HOLMGANG was a CTF hosted by Kripos, a special agency of the Norwegian Police Service, for the University of Oslo, but it was open to the public. Although it was a classic jepoardy-style CTF, it was special in the sence that every chall was connected up to a central incidenct. It was all made to look like an actual police investigation, which made the CTF a lot more fun. The Case Summary can be read here, [case_summary.pdf](/assets/2022-09-04-op_homlgang/case_summary.pdf).
 
 This was the first CTF we competed in as a team, and we are very pleased with how well it went. Ending at 8th place, and possibly the highest scoring student team, was not something we envisioned beforehand. 
 
@@ -42,7 +42,7 @@ This was the first CTF we competed in as a team, and we are very pleased with ho
 | Challenge | Category | Value | Time |
 | --- | --- | --- | --- |
 | Solve me first | Start here | 0 | September 21st, 10:01:59 AM |
-| [Password match](#match---shredder) - Shredder | Password | 3 | September 21st, 12:01:31 PM |
+| [Password match - Shredder](#match---shredder) | Password | 3 | September 21st, 12:01:31 PM |
 | [ChatTomato - Get access](#chattomato---get-access) | Chat | 5 | September 21st, 12:59:37 PM |
 | [ChatTomato - Fetch contents](#chattomato---fetch-contents) | Chat | 5 | September 21st, 1:00:30 PM |
 | [Password match - Belongs to whom?](#match---belongs-to-whom) | Password | 7 | September 21st, 1:02:36 PM |
@@ -54,7 +54,7 @@ This was the first CTF we competed in as a team, and we are very pleased with ho
 | Be concrete - Conclusion | Chemistry | 4 | September 21st, 2:49:27 PM |
 | Documents schmockuments - Comparison | Forgery | 5 | September 21st, 5:00:39 PM |
 | [Credential Custodian](#credential-custodian) | Reversing | 10 | September 21st, 6:27:26 PM |
-| [Criminal polyglot](#criminal-polyglot)) | Language | 10 | September 21st, 6:49:34 PM |
+| [Criminal polyglot](#criminal-polyglot) | Language | 10 | September 21st, 6:49:34 PM |
 | Needle in the haystack | Logs | 10 | September 21st, 10:09:36 PM |
 | [Greedy Grafana Governor - Announcement date](#greedy-grafana-governor---announcement-date) | Gain access | 5 | September 21st, 11:13:16 PM |
 | Documents schmockuments - Authenticity | Forgery | 5 | September 22nd, 8:34:05 AM |

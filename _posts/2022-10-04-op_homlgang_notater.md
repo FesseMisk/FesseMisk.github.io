@@ -1,7 +1,7 @@
 ---
-title: "OP HOLMGANG - Writeup"
+title: "OP HOLMGANG - all notes"
 categories: Writeup
-tags: forensics
+tags: notes
 published: true
 toc: true 
 toc_sticky: true
@@ -11,15 +11,13 @@ header:
     teaser: /images/2022-10-04-09-15-48.png
 tagline: ""
 read_time: true
-date: 2022-08-21
-#last_modified_at: 2022-07-26
+date: 2022-10-04
+last_modified_at: 2022-10-10
 ---
 
 
 # Intro
-intro tekst lorem ipsum
-
-[case_summary.pdf](/assets/2022-09-04-op_homlgang/case_summary.pdf)
+All our notes for the OP-holmgang CTF. [A more propper and finished writeup is here](2022-10-07-op_homlgang.md). 
 
 ## Scoreboard
 
