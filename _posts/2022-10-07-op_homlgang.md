@@ -1,7 +1,7 @@
 ---
 title: "OP HOLMGANG - Writeup"
 categories: Writeup
-tags: writeup
+tags: CTF
 published: true
 toc: true 
 toc_sticky: true
@@ -19,7 +19,7 @@ last_modified_at: 2022-10-10
 # Intro
 OP HOLMGANG was a CTF hosted by Kripos, a special agency of the Norwegian Police Service, for the University of Oslo, but it was open to the public. Although it was a classic jepoardy-style CTF, it was special in the sence that every chall was connected up to a central incidenct. It was all made to look like an actual police investigation, which made the CTF a lot more fun. The Case Summary can be read here, [case_summary.pdf](/assets/2022-09-04-op_homlgang/case_summary.pdf).
 
-This was the first CTF we competed in as a team, and we are very pleased with how well it went. Ending at 8th place, and possibly the highest scoring student team, was not something we envisioned beforehand. 
+This was the first CTF we competed in as a team, and we are very pleased with how well it went. Ending at 8th place, and possibly the highest scoring student team, was not something we expected beforehand. 
 
 
 ## Scoreboard
@@ -105,17 +105,17 @@ def generate_password(length=50):
 
 We can quickly notice that generate_password uses the current time as their seed. 
 
-A seed is “the starting point” of randomness in computers, and using the same seed in the same generator will always grant exactly the same results. 
+A seed is “the starting point” of randomness in computers, and using the same seed in the same generator will always produce exactly the same results. 
 
 We can also see that there are a few time stamps at the start of the file, guiding us to what time IVANOVICH might have generated their password. 
 
-The `time.time()` function is getting the current unix epoch time which equals seconds since 1.jan 1970 00.00 GMT. 
+The `time.time()` function gets the current unix epoch time in seconds since 1.jan 1970 00.00 GMT. 
 
-Knowing what we know we started to modify the program to be able to bruteforce the password. We know that the password was originally generated after the 3rd of may, probably the 3rd of 4th. 
+Knowing the timestamps from when the program was created, we started to modify the program to be able to bruteforce the password. We know that the password was originally generated after the 3rd of May, probably between the 3rd and 4th of May. 
 
-Using a unix epoch time calculator we found our staring second and approximated an ending second as well. Brute forcing on a modern computer is quite fast as long as it isn’t programmed in obviously inefficient ways. In our example we included quite a few extra hours on either side resulting in over 250 000 combinations to be brute forced, and the complete program used 36 seconds. 
+Using a unix epoch time calculator we found our starting second and approximated an ending second as well. Brute forcing on a modern computer is quite fast as long as it isn’t programmed in obviously inefficient ways. In our example we included quite a few extra hours on either side resulting in over _250 000_ combinations to be brute forced, and the complete program used 36 seconds. 
 
-`generate_password()` was edited to include custom numbers as seeds rather than `time.time()`.
+We edited `generate_password()` to include custom numbers as seeds rather than `time.time()`:
 
 ```python
 def generate_password(t, length=50):
@@ -129,9 +129,9 @@ def generate_password(t, length=50):
 				...
 ```
 
-In the running part of the code we start a brute force of all seeds and tried to decrypt the cipher text with the generated passwords. All decoded “plain text” that only included printable characters were printed, which turned out to be quite a few. 
+In the running part of the code we started a brute force of all seeds and tried to decrypt the ciphertext with the generated passwords. Then we only printed the decoded “plaintext” that included printable characters, which turned out to be quite a few. 
 
-It would be possible to search out the flag only looking at the output, but further filtering was possible. Knowing that it might be a BIP39 seed phrase the correct plain text should have 12 words. Looking for a minimum of 5 words was done like this `if len(message.split()) > 5:`, and was enough to filter out the correct flag.
+It would be possible to search out the flag only looking at the output, but further filtering was possible. Knowing that it might be a BIP39 seed phrase the correct plain text should have 12 words. Looking for a minimum of 5 words was done like this `if len(message.split()) > 5:`, and that was enough to filter out the correct flag.
 
 ```python
 def main():
@@ -220,19 +220,19 @@ One might say that you usually have two methods of solving a challenge. The smar
 
 ![IMG_20220921_115746.jpg](/assets/2022-09-04-op_homlgang/IMG_20220921_115746.jpg)
 
-From this solution we considered a few different spellings, and we had to get it right as we only had 3 opportunities to submit the flag. 
+From this solution we considered a few different spellings, and we had to get it right as we only had 3 guesses to submit the flag. 
 
-The organizers showed of after the event that they had a ton of different spellings submitted.  Some shown below. 
+The organizers showed of after the event that they had a ton of different spellings submitted. Some shown below. 
 
 ![Screenshot from 2022-09-29 10-54-44.png](/assets/2022-09-04-op_homlgang/Screenshot_from_2022-09-29_10-54-44.png)
 
-After having tried two passwords and failed twice we looked for more evidence to back up what our last submission would be.
+After having tried two passwords and failling twice, we looked for more evidence to back up what our last submission would be.
 
 ![image1.jpg](/assets/2022-09-04-op_homlgang/image1.jpg)
 
 This image gave us the final clue.
 
-**140 Ton Fatberg** was an article on his working dashboard with link to the article. [https://www.businessinsider.com/this-130-tonne-fatberg-has-been-discovered-under-the-streets-of-east-london-2017-9?r=US&IR=T](https://www.businessinsider.com/this-130-tonne-fatberg-has-been-discovered-under-the-streets-of-east-london-2017-9?r=US&IR=T) 
+**140 Ton Fatberg** was an article on his working dashboard with a link to the article. [https://www.businessinsider.com/this-130-tonne-fatberg-has-been-discovered-under-the-streets-of-east-london-2017-9?r=US&IR=T](https://www.businessinsider.com/this-130-tonne-fatberg-has-been-discovered-under-the-streets-of-east-london-2017-9?r=US&IR=T) 
 
 ### Flag
 
@@ -240,7 +240,7 @@ This image gave us the final clue.
 
 ## Match - Belongs to whom
 
-This was a followup-challenge to **Match - Shredder.** We have not saved the exact challenge text, but the challenge was to figure out whose password 140TonFatberg is. We were given a shadow-file extracted from Kallestads computer.
+This was a followup-challenge to **Match - Shredder.** We have not saved the exact challenge text, but the challenge was to figure out the password of **140TonFatberg**. We were given a shadow-file extracted from Kallestads computer.
 
 The flag is the user
 
@@ -286,7 +286,7 @@ $
 
 A lot of unclear problem solving was applied and nothing gave results. 
 
-In the end we appended the known password to a short separate passwordlist such that the new file included 50 known wrong passwords and one know correct password.
+In the end we appended the known password to a short separate passwordlist such that the new file included 50 known wrong passwords and one known correct password.
 
 This made john function correctly and gave us the correct result. 
 
@@ -317,7 +317,7 @@ Example: SomeUser
 
 Bitplanes, photoshop, qrazybox
 
-Used phtoshop to make the image more viewable. 
+We used phtoshop to make the image more viewable. 
 
 Then we manually recreated the QR code in [https://merricx.github.io/qrazybox/](https://merricx.github.io/qrazybox/)
 
@@ -402,6 +402,8 @@ Example: 479988776655
 
 ![Image3409.jpg](/assets/2022-09-04-op_homlgang/Image3409.jpg)
 
+
+
 Googling `ersete security club resturant croatia` we find this link:
 
 [https://www.sail-croatia.com/set-sail/sailing-croatian-restaurants-route](https://www.sail-croatia.com/set-sail/sailing-croatian-restaurants-route)
@@ -412,7 +414,7 @@ Here we see this picture:
 
 Which is in the same location. Doing a reverse image search on this image we find it is from the following restaurant: [Konoba Bako](https://www.tripadvisor.com/Restaurant_Review-g424973-d1462116-Reviews-Konoba_BAKO-Vis_Island_of_Vis_Split_Dalmatia_County_Dalmatia.html#MAPVIEW)
 
-A resturant really close by **[Konoba Jastožera](https://www.tripadvisor.com/Restaurant_Review-g1062125-d8432167-Reviews-Konoba_Jastozera-Komiza_Island_of_Vis_Split_Dalmatia_County_Dalmatia.html)**, Seems to be the correct resturant. 
+A resturant really close by **[Konoba Jastožera](https://www.tripadvisor.com/Restaurant_Review-g1062125-d8432167-Reviews-Konoba_Jastozera-Komiza_Island_of_Vis_Split_Dalmatia_County_Dalmatia.html)**, which seems to be the correct resturant. 
 
 ### Flag
 
@@ -440,13 +442,13 @@ Example: 39.0581, -1.9872
 
 ### Solution
 
-On the one picture we can see a Swedish restaurant and their phone number. Googling them gave us a address in Torrevieja Spain which matched up with the photos. We had the correct location. In the police report it is stated that Kallestad texted
+On the one picture we can see a Swedish restaurant and their phone number. Googling them gave us a address in _Torrevieja Spain_ which matched up with the photos. We had the correct location. In the police report it is stated that Kallestad texted
 
-*"Hi Sergei. You know the street name, and the number of the apartment
-with the red ring on it, is 22. Hope to see you soon, Robbans Pizzario is near by and very
-nice It's about a 500m walk".*
 
-Thus we know its about a 500m walk. We can also see from the pictures that is has a red pavement, is located in a small hill, have a right turn and has a few tall apartments in the background. Searching the area we found the tall apartments. Further search round that area gave result with the red pavement and a right turn which turned out to be the correct position of the photo. Then opening google maps and right-clicking on the balcony from the picture resulted in the correct coordinates. 
+> "Hi Sergei. You know the street name, and the number of the apartment with the red ring on it, is 22. Hope to see you soon, Robbans Pizzario is near by and very
+nice It's about a 500m walk".
+
+Thus we know it's about a 500m walk. We can also see from the pictures that it has a red pavement, is located in a small hill, has a right turn and has a few tall apartments in the background. Searching the area we found the tall apartments. Further searching around that area, we found the red pavement and a right turn, which turned out to be the correct position of the photo. Opening google maps and right-clicking on the balcony from the picture gave the correct coordinates. 
 
 [Google earth](https://earth.google.com/web/search/C.+Granada,+5,+Torrevieja,+Spain/@38.00456615,-0.65358012,40.60143652a,0d,60y,21.18704986h,85t,0r/data=CigiJgokCYF14CyZAENAERkZtV1uAENAGQRdFVTx8uS_IRitL124_uS_IhoKFmM1Z1NlZXA4MUlOUGoyb0dvMnVEWmcQAjoDCgEw?authuser=0)
 
@@ -456,7 +458,7 @@ Thus we know its about a 500m walk. We can also see from the pictures that is ha
 
 ## ****Where's the money hidden - Address****
 
-We found a picture of the watchtower and the appartment in the task “Where's the money hidden - Phone number” - and figured out this was in KOMIŽA, Croatia. Using Google Maps, we navigate to the watchtower, and from there look at pictures nearby. The flag was found on [this](https://www.google.com/maps/place/Ul.+Riva+Svetoga+Mikule+2,+21485,+Komi%C5%BEa,+Kroatia/@43.0439957,16.0883026,3a,75y,149.29h,92.38t/data=!3m6!1e1!3m4!1slyF2rhvBIRpZOFBPL5jqwQ!2e0!7i13312!8i6656!4m5!3m4!1s0x1335bc3e107739e3:0xfd9042829b62694e!8m2!3d43.0439704!4d16.0883704?hl=nb) picture
+We found a picture of the watchtower and the appartment in the task “Where's the money hidden - Phone number” - and figured out this was in _KOMIŽA, Croatia_. Using Google Maps, we navigate to the watchtower, and from there look at pictures nearby. The flag was found on [this](https://www.google.com/maps/place/Ul.+Riva+Svetoga+Mikule+2,+21485,+Komi%C5%BEa,+Kroatia/@43.0439957,16.0883026,3a,75y,149.29h,92.38t/data=!3m6!1e1!3m4!1slyF2rhvBIRpZOFBPL5jqwQ!2e0!7i13312!8i6656!4m5!3m4!1s0x1335bc3e107739e3:0xfd9042829b62694e!8m2!3d43.0439704!4d16.0883704?hl=nb) picture
 
 ![Untitled](/assets/2022-09-04-op_homlgang/Untitled%202.png)
 
