@@ -7,39 +7,39 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Docs"
-    url: /docs/cheatsheets/
+  # - title: "Docs"
+  #   url: /docs/cheatsheets/
 
-docs:
-  - title: Notes Collection
-    children:
-      - title: "Cheatsheets"
-        url: /docs/cheatsheets/
-      - title: "Recon & Enumeration"
-        url: /docs/recon-and-enumeration/
-      - title: "Exploiting Vulnerabilities"
-        url: /docs/exploiting-vulnerabilities/
-      - title: "Windows Post-Exploitation"
-        url: /docs/windows-post-exploitation/
-      - title: "Linux Post-Exploitation"
-        url: /docs/linux-post-exploitation/
-      - title: "Exploit Development"
-        url: /docs/exploit-development/
-      - title: "Reverse Engineering"
-        url: /docs/reverse-engineering/
-#      - title: ""
-#        url: "/docs/"
+# docs:
+#   - title: Notes Collection
+#     children:
+#       - title: "Cheatsheets"
+#         url: /docs/cheatsheets/
+#       - title: "Recon & Enumeration"
+#         url: /docs/recon-and-enumeration/
+#       - title: "Exploiting Vulnerabilities"
+#         url: /docs/exploiting-vulnerabilities/
+#       - title: "Windows Post-Exploitation"
+#         url: /docs/windows-post-exploitation/
+#       - title: "Linux Post-Exploitation"
+#         url: /docs/linux-post-exploitation/
+#       - title: "Exploit Development"
+#         url: /docs/exploit-development/
+#       - title: "Reverse Engineering"
+#         url: /docs/reverse-engineering/
+# #      - title: ""
+# #        url: "/docs/"
 
-  - title: Example TEST
-    children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
+  # - title: Example TEST
+  #   children:
+  #     - title: "Configuration"
+  #       url: /docs/configuration/
+  #     - title: "Navigation"
+  #       url: /docs/navigation/
+  #     - title: "UI Text"
+  #       url: /docs/ui-text/
+  #     - title: "Authors"
+  #       url: /docs/authors/
+  #     - title: "Layouts"
+  #       url: /docs/layouts/
 

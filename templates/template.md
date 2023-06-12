@@ -39,9 +39,8 @@ Lorem ipsum
 Lorem ipsum
 
 ## Flag
-```
-TGHACK{TEST}
-```
+`TGHACK{TEST}`
+
 
 ## Detailed Solution
 Lorem ipsum

@@ -19,8 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   FesseMisk CTF team 
 twitter_username: 
 github_username: FesseMisk
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin2   : "neon"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin2   : "contrast"
 search: true
 repository: FesseMisk/FesseMisk.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 
@@ -66,7 +66,7 @@ plugins:
 
 author:
   name   : "FesseMisk"
-  avatar : "https://images.squarespace-cdn.com/content/v1/54a2e8cbe4b08f7628c934c8/1504807920952-7ARNSMPXIS26L9GNKCFU/Puffer-Fish-Avatar-433px.png"
+  avatar : "/images/avatar2.png"
   bio    : "CTF team consisting of students from [Norwegian Defence Cyber Academy](https://www.forsvaret.no/utdanning/utdanninger/ingeniorfag-studieretning-telematikk)"
   location : "Lillehammer, Norge"
   links:
