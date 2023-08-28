@@ -67,7 +67,7 @@ plugins:
 author:
   name   : "FesseMisk"
   avatar : "/images/avatar2.png"
-  bio    : "CTF team consisting of students from [Norwegian Defence Cyber Academy](https://www.forsvaret.no/utdanning/utdanninger/ingeniorfag-studieretning-telematikk)"
+  bio    : "CTF Team"
   location : "Lillehammer, Norge"
   links:
     #- label: "CV"
